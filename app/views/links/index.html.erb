@@ -1,2 +1,11 @@
-<h1>Links#index</h1>
-<p>Find me in app/views/links/index.html.erb</p>
+<h1>줄인 링크 리스트</h1>
+<div>
+    <a href="/links/new">새로 만들기</a>
+</div>
+<div>
+    <% @links.each do |link| %>
+
+        <p><%= link.short %>  => <%= link.long %></p>
+
+    <% end %>
+</div>
