@@ -1,2 +1,9 @@
-<h1>Links#new</h1>
-<p>Find me in app/views/links/new.html.erb</p>
+<h1>짧은 링크 만들기</h1>
+<div>
+    <form action="/links" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+        <input type="text" name="long" placeholder="바꿀 URL"/>
+        <input type="text" name="short" placeholder="바뀔 URL"/>
+        <input type="submit" />
+    </form>
+</div>
