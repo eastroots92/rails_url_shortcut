@@ -17,4 +17,12 @@ class LinksController < ApplicationController
 
   def destroy
   end
+
+  def goto
+    shortUrl = params[:short]
+    longUrl = Link.find_by(short: shortUrl)
+
+    redirect_to longUrl.long
+    
+  end
 end
