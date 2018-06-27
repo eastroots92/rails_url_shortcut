@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'links/index'
+  # It is RESTful
+  get 'links' => 'links#index'
+  get 'links/new' => 'links#new'
+  post 'links' => "links#create"
+  delete 'links/:id' => 'links#destroy'
 
-  get 'links/new'
-
-  get 'links/create'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
