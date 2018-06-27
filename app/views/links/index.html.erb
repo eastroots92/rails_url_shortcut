@@ -5,7 +5,7 @@
 <div>
     <% @links.each do |link| %>
 
-        <p><%= link.short %>  => <%= link.long %></p>
+        <p> <a href="/<%=link.short %>">[바로가기]</a> | <a href="/links/<%= link.id %>" data-method="delete" data-confirm="삭제 하시겠습니까?">[삭제하기]</a>  <%= link.short %>  => <%= link.long %>  </p>
 
     <% end %>
 </div>
